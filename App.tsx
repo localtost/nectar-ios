@@ -1,5 +1,7 @@
 import React from 'react';
+import MainStack from './app/navigation/MainStack';
 
 const App = () => {
-  return <></>;
+  return <MainStack/>;
 };
+export default App;
