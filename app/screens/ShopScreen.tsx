@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import Layout from '../components/Layout';
+import {Text} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ShopScreen(): JSX.Element {
   return (
-    <Layout>
+    <SafeAreaView>
       <Text>ShopScreen</Text>
-    </Layout>
+    </SafeAreaView>
   );
 }

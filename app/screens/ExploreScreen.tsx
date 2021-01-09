@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import Layout from '../components/Layout';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ExploreScreen(): JSX.Element {
   return (
-    <Layout>
+    <SafeAreaView>
       <Text>ExploreScreen</Text>
-    </Layout>
+    </SafeAreaView>
   );
 }
