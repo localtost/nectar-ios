@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  FlatList,
   Image,
   StyleProp,
   StyleSheet,
@@ -34,11 +33,7 @@ export default function AccountScreen(): JSX.Element {
             }}>
             <Image
               source={require('../assets/icons/profileLogo.png')}
-              style={{
-                width: SCREEN_WIDTH / 6,
-                height: SCREEN_WIDTH / 6,
-                borderRadius: 50,
-              }}
+              style={styles.image}
             />
             <View
               style={{
@@ -77,5 +72,10 @@ const styles = StyleSheet.create({
     width: '100%',
     height: SCREEN_HEIGHT / 7,
     justifyContent: 'flex-start',
+  },
+  image: {
+    width: SCREEN_WIDTH / 6,
+    height: SCREEN_WIDTH / 6,
+    borderRadius: 50,
   },
 });
