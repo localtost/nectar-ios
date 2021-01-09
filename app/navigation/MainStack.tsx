@@ -10,7 +10,7 @@ export default function MainStack(): JSX.Element {
   return (
     <NavigationContainer>
       <Main.Navigator headerMode="none">
-          <Main.Screen name="Main" component={ButtonStack} />
+        <Main.Screen name="Main" component={ButtonStack} />
       </Main.Navigator>
     </NavigationContainer>
   );

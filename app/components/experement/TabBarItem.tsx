@@ -1,27 +1,13 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Theme} from '../Theme';
-
+import {Theme} from '../../Theme';
+import {data} from '../../utils/data';
 type Props = {
   iconName: string;
   isCurrent?: boolean;
 };
-interface IconsName {
-  Home: string;
-  Search1: string;
-  Shoppingcart:string;
-  Hearto:string;
-  User: string;
-}
-const data:IconsName = {
-  Home: 'Shop',
-  Search1: 'Explore',
-  Shoppingcart: 'Cart',
-  Hearto: 'Favorite',
-  User:"Account"
-};
-const TabBarItem: React.FC<Props> = ({iconName, isCurrent}) => {
+const TabBarItem: React.FC<Props> = ({iconName, isCurrent}:Props) => {
   const width: number = Dimensions.get('window').width;
   const activeItem = isCurrent ? Theme.main : Theme.black;
   const activeScale = isCurrent ? 1.1 : 1
@@ -54,7 +40,7 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 20,
+    paddingTop: 10,
   },
   text: {
     paddingTop: 5,
