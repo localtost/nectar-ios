@@ -15,7 +15,7 @@ export type FavoriteStackParamList = {
     Favorite: undefined;
 };
 export type ExploreStackParamList = {
-    Explore: undefined;
+    'Find Products': undefined;
 };
 export type CartStackParamList = {
     Cart: undefined;

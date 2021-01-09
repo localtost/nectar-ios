@@ -1,0 +1,22 @@
+{
+"categories": [
+  {
+      "name":"Fresh Fruits & Vegitables"
+  },
+   {
+      "name":"Cooking Oli & Ghee"
+  },
+  {
+      "name":"Meat & Fish"
+  },
+  {
+      "name":"Bakery & Snacks"
+  },
+  {
+      "name":"Dairy & Eggs"
+  },
+  {
+      "name":"Beverages"
+  }
+ ]
+}
