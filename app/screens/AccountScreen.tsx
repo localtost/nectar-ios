@@ -5,16 +5,15 @@ import {
   StyleProp,
   StyleSheet,
   View,
-  StyleSheetProperties,
   ViewStyle,
   Text,
 } from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../components/Button';
-import Layout from '../components/Layout';
 import ProfileSettingItem from '../components/ProfileSettingItem';
 import {SCREEN_HEIGHT, SCREEN_WIDTH, Theme} from '../Theme';
-import {ProfileItem, profileItems} from '../utils/data';
+import {profileItems} from '../utils/data';
 
 interface Props {
   children?: React.ReactNode;
@@ -22,44 +21,52 @@ interface Props {
 }
 export default function AccountScreen(): JSX.Element {
   return (
-    <Layout>
-      <Container
-        style={{
-          alignItems: 'center',
-          flexDirection: 'row',
-          padding: 15,
-          borderBottomWidth: 1,
-          borderBottomColor: Theme.gray,
-        }}>
-        <Image
-          source={require('../assets/icons/profileLogo.png')}
-          style={{
-            width: SCREEN_WIDTH/6,
-            height: SCREEN_WIDTH/6,
-            borderRadius: 50,
-          }}
-        />
-        <View
-          style={{width: '80%', justifyContent: 'flex-start', marginLeft: 10}}>
-          <Text
-            style={{
-              fontSize: 18,
-              fontWeight: 'bold',
-            }}>
-            Artem Kumskov
-          </Text>
-          <Text style={{color: Theme.darkenGray}}>artem.kumskov@gmail.com</Text>
-        </View>
-      </Container>
+    <View style={{backgroundColor: Theme.white, flex: 1}}>
       <ScrollView>
-        {profileItems.map((item) => (
-          <ProfileSettingItem item={item} key={item.id} />
-        ))}
-        <Container style={{alignItems: 'center', justifyContent: 'center'}}>
-          <Button title="Log Out" />
-        </Container>
+        <SafeAreaView>
+          <Container
+            style={{
+              alignItems: 'center',
+              flexDirection: 'row',
+              padding: 15,
+              borderBottomWidth: 1,
+              borderBottomColor: Theme.gray,
+            }}>
+            <Image
+              source={require('../assets/icons/profileLogo.png')}
+              style={{
+                width: SCREEN_WIDTH / 6,
+                height: SCREEN_WIDTH / 6,
+                borderRadius: 50,
+              }}
+            />
+            <View
+              style={{
+                width: '80%',
+                justifyContent: 'flex-start',
+                marginLeft: 10,
+              }}>
+              <Text
+                style={{
+                  fontSize: 18,
+                  fontWeight: 'bold',
+                }}>
+                Artem Kumskov
+              </Text>
+              <Text style={{color: Theme.darkenGray}}>
+                artem.kumskov@gmail.com
+              </Text>
+            </View>
+          </Container>
+          {profileItems.map((item) => (
+            <ProfileSettingItem item={item} key={item.id} />
+          ))}
+          <Container style={{alignItems: 'center', justifyContent: 'center'}}>
+            <Button title="Log Out" />
+          </Container>
+        </SafeAreaView>
       </ScrollView>
-    </Layout>
+    </View>
   );
 }
 const Container = ({children, style}: Props) => {

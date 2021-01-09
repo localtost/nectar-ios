@@ -12,12 +12,9 @@ import {RootStackParamList} from '../types';
 import {Theme} from '../../Theme';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {data} from '../../utils/data';
-import {StyleSheet, Animated} from 'react-native';
+import {StyleSheet} from 'react-native';
 const Tab = createBottomTabNavigator<RootStackParamList>();
 export default function ButtonStack(): JSX.Element {
-  const [translateValue] = useState<Animated.AnimatedValue>(
-    new Animated.Value(0),
-  );
   return (
     <>
       <Tab.Navigator
