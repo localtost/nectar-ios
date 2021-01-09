@@ -2,7 +2,7 @@ export type RootStackParamList = {
     Home: undefined;
     Hearto: undefined;
     Search1: undefined;
-    User : undefined;
+    User: undefined;
     Shoppingcart: undefined;
 };
 export type ShopStackParamList = {

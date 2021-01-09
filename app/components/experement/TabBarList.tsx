@@ -4,18 +4,20 @@ import {
   TouchableOpacity,
   StyleSheet,
   Animated,
-  useWindowDimensions,
 } from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import BottomMenuItem from './TabBarItem';
-import {Theme} from '../Theme';
+import {Theme,SCREEN_WIDTH, SCREEN_HEIGHT} from '../../Theme';
 
-const TabBarList = ({state, descriptors, navigation}: BottomTabBarProps) => {
-  const totalWidth: number = useWindowDimensions().width;
+export default function TabBarList({
+  state,
+  descriptors,
+  navigation,
+}: BottomTabBarProps): JSX.Element {
   const [translateValue] = useState<Animated.AnimatedValue>(
     new Animated.Value(0),
   );
-  const tabWidth: number = totalWidth / state.routes.length;
+  const tabWidth: number = SCREEN_WIDTH / state.routes.length;
   return (
     <View style={[style.tabContainer]}>
       <View style={{flexDirection: 'row'}}>
@@ -71,7 +73,7 @@ const TabBarList = ({state, descriptors, navigation}: BottomTabBarProps) => {
       </View>
     </View>
   );
-};
+}
 
 const style = StyleSheet.create({
   tabContainer: {
@@ -88,11 +90,10 @@ const style = StyleSheet.create({
     shadowRadius: 4.0,
     backgroundColor: Theme.white,
     elevation: 10,
-    position: 'absolute',
     bottom: 0,
   },
   slider: {
-    height: 4,
+    height: 3,
     position: 'absolute',
     top: 0,
     left: 15,
@@ -101,4 +102,3 @@ const style = StyleSheet.create({
     width: 10,
   },
 });
-export default TabBarList;
