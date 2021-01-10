@@ -11,8 +11,8 @@ import {ScrollView} from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Button from '../components/Button';
 import ProfileSettingItem from '../components/ProfileSettingItem';
-import {SCREEN_HEIGHT, SCREEN_WIDTH, Theme} from '../Theme';
-import {profileItems} from '../utils/data';
+import {SCREEN_HEIGHT, SCREEN_WIDTH, Theme} from '../config/Theme';
+import {profileItems} from '../config/data';
 
 interface Props {
   children?: React.ReactNode;

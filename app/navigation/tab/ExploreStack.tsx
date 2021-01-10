@@ -2,7 +2,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {ExploreStackParamList} from '../types';
 import ExploreScreen from '../../screens/ExploreScreen';
-import {Theme} from '../../Theme';
+import {Theme} from '../../config/Theme';
 
 const Main = createStackNavigator<ExploreStackParamList>();
 

@@ -1,4 +1,4 @@
-import { Theme } from './../Theme';
+import { Theme } from '../config/Theme';
 
 export const useColor = (index: number) => {
     switch (index) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, TextInput, StyleSheet } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { Theme } from '../Theme';
+import { Theme } from '../config/Theme';
 
 export default function SearchInput():JSX.Element {
     return (

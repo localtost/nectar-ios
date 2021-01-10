@@ -1,8 +1,8 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Theme} from '../../Theme';
-import {data} from '../../utils/data';
+import {Theme} from '../../config/Theme';
+import {data} from '../../config/data';
 type Props = {
   iconName: string;
   isCurrent?: boolean;
