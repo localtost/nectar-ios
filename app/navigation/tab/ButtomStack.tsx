@@ -9,9 +9,9 @@ import CartStack from './CartStack';
 import FavoriteStack from './FavoriteStack';
 import ProfileStack from './ProfileStack';
 import {RootStackParamList} from '../types';
-import {Theme} from '../../Theme';
+import {Theme} from '../../config/Theme';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {data} from '../../utils/data';
+import {data} from '../../config/data';
 import {StyleSheet} from 'react-native';
 const Tab = createBottomTabNavigator<RootStackParamList>();
 export default function ButtonStack(): JSX.Element {

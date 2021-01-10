@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
-import {Theme, SCREEN_HEIGHT} from '../Theme';
+import {Theme, SCREEN_HEIGHT} from '../config/Theme';
 
 interface Props {
   title: string;

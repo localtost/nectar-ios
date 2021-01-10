@@ -2,7 +2,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {ShopStackParamList} from '../types';
 import ShopScreen from '../../screens/ShopScreen';
-import {Theme} from '../../Theme';
+import {Theme} from '../../config/Theme';
 
 const Main = createStackNavigator<ShopStackParamList>();
 

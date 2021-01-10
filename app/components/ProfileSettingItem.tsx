@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {Theme} from '../Theme';
-import {ProfileItem} from '../utils/data';
-import {SCREEN_WIDTH} from '../Theme';
+import {Theme} from '../config/Theme';
+import {ProfileItem} from '../config/data';
+import {SCREEN_WIDTH} from '../config/Theme';
 
 interface Props {
   item: ProfileItem;

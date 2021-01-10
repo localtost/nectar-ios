@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, TouchableOpacity, StyleSheet, Animated} from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import BottomMenuItem from './TabBarItem';
-import {Theme, SCREEN_WIDTH, SCREEN_HEIGHT} from '../../Theme';
+import {Theme, SCREEN_WIDTH, SCREEN_HEIGHT} from '../../config/Theme';
 
 export default function TabBarList({
   state,
