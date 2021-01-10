@@ -7,10 +7,10 @@ type Props = {
   iconName: string;
   isCurrent?: boolean;
 };
-const TabBarItem: React.FC<Props> = ({iconName, isCurrent}:Props) => {
+const TabBarItem: React.FC<Props> = ({iconName, isCurrent}: Props) => {
   const width: number = Dimensions.get('window').width;
   const activeItem = isCurrent ? Theme.main : Theme.black;
-  const activeScale = isCurrent ? 1.1 : 1
+  const activeScale = isCurrent ? 1.1 : 1;
   return (
     <View style={styles.container}>
       <AntDesign

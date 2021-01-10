@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageBackground, Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import SearchInput from '../components/SearchInput';
 import {Theme} from '../Theme';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -27,15 +27,9 @@ export default function ShopScreen(): JSX.Element {
         </Text>
       </View>
       <SearchInput />
-      <View style={{width: '90%', alignSelf: 'center'}}>
-        <ImageBackground
+      <View style={{width: '90%', alignSelf: 'center',marginTop:20}}>
+        <Image
           source={require('../assets/background/banner.png')}
-          resizeMode='contain'
-          style={{
-            width: '100%',
-            height: '60%',
-            alignSelf: 'center',
-          }}
         />
       </View>
     </View>

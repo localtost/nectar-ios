@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { Theme } from '../Theme';
 

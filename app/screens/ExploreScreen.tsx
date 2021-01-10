@@ -1,9 +1,10 @@
-import React from 'react';
-import {View} from 'react-native';
+import React ,{ Suspense} from 'react';
+import {Text, View} from 'react-native';
 import {Theme} from '../Theme';
 import SearchInput from '../components/SearchInput';
-import { ScrollView } from 'react-native-gesture-handler';
+import {ScrollView } from 'react-native-gesture-handler';
 import ExploreItem from '../components/ExploreItem';
+import { categories } from '../utils/data';
 export default function ExploreScreen(): JSX.Element {
   return (
     <View
@@ -14,16 +15,21 @@ export default function ExploreScreen(): JSX.Element {
         alignItems: 'center',
       }}>
       <SearchInput />
-      <ScrollView contentContainerStyle={{width: '95%',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          marginTop:10,
+      <Suspense fallback={<Text>Loading ...</Text>}>
+        <ScrollView
+          contentContainerStyle={{
+            width: '90%',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            marginTop: 5,
+            alignSelf: 'center',
           }}>
-          {
-            [1,2,3,4,5,6].map(el=><ExploreItem key={el}/>)
-          }
+          {categories.map((el, index) => (
+            <ExploreItem key={index} index={index} item={el} />
+          ))}
         </ScrollView>
+      </Suspense>
     </View>
   );
 }

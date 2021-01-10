@@ -1,5 +1,7 @@
+import { ImageSourcePropType } from "react-native";
+
 interface IconsName {
-    [Home:string]: string;
+    [Home: string]: string;
     Search1: string;
     Shoppingcart: string;
     Hearto: string;
@@ -59,3 +61,37 @@ export const profileItems: Array<ProfileItem> = [
         icon: 'infocirlceo',
     },
 ];
+export interface CategoriesItem {
+    name: string;
+    icon: ImageSourcePropType;
+}
+export const categories: Array<CategoriesItem> = [
+    {
+        name: "Fresh Fruits & Vegitables",
+        icon: require('../assets/icons/categoriesFruit.png')
+    },
+    {
+        name: "Cooking Oli & Ghee",
+        icon: require('../assets/icons/categoriesCook.png')
+
+    },
+    {
+        name: "Meat & Fish",
+        icon: require('../assets/icons/categoriesMeat.png')
+
+    },
+    {
+        name: "Bakery & Snacks",
+        icon: require('../assets/icons/categoriesBakery.png')
+
+    },
+    {
+        name: "Dairy & Eggs",
+        icon: require('../assets/icons/categoriesDairy.png')
+
+    },
+    {
+        name: "Beverages",
+        icon: require('../assets/icons/categoriesBeverage.png')
+    }
+]
