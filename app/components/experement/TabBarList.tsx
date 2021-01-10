@@ -1,13 +1,8 @@
 import React, {useState} from 'react';
-import {
-  View,
-  TouchableOpacity,
-  StyleSheet,
-  Animated,
-} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, Animated} from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import BottomMenuItem from './TabBarItem';
-import {Theme,SCREEN_WIDTH, SCREEN_HEIGHT} from '../../Theme';
+import {Theme, SCREEN_WIDTH, SCREEN_HEIGHT} from '../../Theme';
 
 export default function TabBarList({
   state,
@@ -79,9 +74,9 @@ const style = StyleSheet.create({
   tabContainer: {
     height: 70,
     width: '100%',
-    borderRadius:25,
-    borderBottomLeftRadius:0,
-    borderBottomRightRadius:0,
+    borderRadius: 25,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
     shadowOffset: {
       width: 0,
       height: -1,
