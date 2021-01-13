@@ -3,7 +3,6 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import {useColor} from '../hooks/useColor';
 import {Theme} from '../config/Theme';
 import {CategoriesItem} from '../config/data';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 interface Props {
   index: number;

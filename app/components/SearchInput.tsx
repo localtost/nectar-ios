@@ -1,22 +1,23 @@
-import React from 'react'
-import { View, TextInput, StyleSheet } from 'react-native'
+import React from 'react';
+import {View, TextInput, StyleSheet} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { Theme } from '../config/Theme';
+import {Theme} from '../config/Theme';
 
-export default function SearchInput():JSX.Element {
-    return (
-      <View style={{width: '100%', alignItems: 'center'}}>
-        <View style={styles.container}>
-          <AntDesign name="search1" size={20} />
-          <TextInput
-            placeholder="Search Store"
-            style={styles.input}
-          />
-        </View>
-      </View> 
-    );
+export default function SearchInput(): JSX.Element {
+  return (
+    <View style={styles.wrapper}>
+      <View style={styles.container}>
+        <AntDesign name="search1" size={20} />
+        <TextInput placeholder="Search Store" style={styles.input} />
+      </View>
+    </View>
+  );
 }
 const styles = StyleSheet.create({
+  wrapper: {
+    width: '100%',
+    alignItems: 'center',
+  },
   container: {
     width: '90%',
     backgroundColor: Theme.ligthGray,

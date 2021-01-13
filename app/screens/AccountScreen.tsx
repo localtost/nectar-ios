@@ -8,11 +8,12 @@ import {
   Text,
 } from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Button from '../components/Button';
 import ProfileSettingItem from '../components/ProfileSettingItem';
 import {SCREEN_HEIGHT, SCREEN_WIDTH, Theme} from '../config/Theme';
 import {profileItems} from '../config/data';
+import {profileLogo} from '../config/images';
 
 interface Props {
   children?: React.ReactNode;
@@ -23,29 +24,12 @@ export default function AccountScreen(): JSX.Element {
     <View style={{backgroundColor: Theme.white, flex: 1}}>
       <ScrollView>
         <SafeAreaView>
-          <Container
-            style={{
-              alignItems: 'center',
-              flexDirection: 'row',
-              padding: 15,
-              borderBottomWidth: 1,
-              borderBottomColor: Theme.gray,
-            }}>
-            <Image
-              source={require('../assets/icons/profileLogo.png')}
-              style={styles.image}
-            />
+          <Container style={styles.overlayContainer}>
+            <Image source={profileLogo} style={styles.image} />
             <View
-              style={{
-                width: '80%',
-                justifyContent: 'flex-start',
-                marginLeft: 10,
-              }}>
+              style={styles.titlesContainre}>
               <Text
-                style={{
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                }}>
+                style={styles.nameTitle}>
                 Artem Kumskov
               </Text>
               <Text style={{color: Theme.darkenGray}}>
@@ -68,10 +52,26 @@ const Container = ({children, style}: Props) => {
   return <View style={[styles.container, style]}>{children}</View>;
 };
 const styles = StyleSheet.create({
+  overlayContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    padding: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: Theme.gray,
+  },
   container: {
     width: '100%',
     height: SCREEN_HEIGHT / 7,
     justifyContent: 'flex-start',
+  },
+  nameTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  titlesContainre: {
+    width: '80%',
+    justifyContent: 'flex-start',
+    marginLeft: 10,
   },
   image: {
     width: SCREEN_WIDTH / 6,
