@@ -11,7 +11,8 @@ export function Banner({url}: Props) {
       <Image source={url} />
     </View>
   );
-}
+};
+
 const styles = StyleSheet.create({
     container:{
       width: '90%',
